@@ -7,5 +7,14 @@ pipeline {
       }
     }
 
+    stage('Construire l\'image Docker') {
+      steps {
+        script {
+          docker.build('image-jenkins')
+        }
+
+      }
+    }
+
   }
 }
